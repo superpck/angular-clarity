@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
 <br>
-Clarity Design System 
+and [Clarity Design System] by VMware
 (https://vmware.github.io/clarity/) version 0.13.10
 
 ## Development server
