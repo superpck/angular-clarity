@@ -1,6 +1,9 @@
-# A
+# Angular-Clarity
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+<br>
+Clarity Design System 
+(https://vmware.github.io/clarity/) version 0.13.10
 
 ## Development server
 
