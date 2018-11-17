@@ -1,0 +1,198 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/* font set ==================== */
+@import url(https://fonts.googleapis.com/css?family=Athiti|Bai+Jamjuree|Chakra+Petch|Charmonman|Chonburi|Fahkwang|Itim|K2D|Kanit|KoHo|Kodchasan|Krub|Maitree|Mali|Mitr|Niramit|Pattaya|Pridi|Prompt|Sriracha|Srisakdi|Taviraj|Trirong);
+
+.font-athiti { font-family: 'Athiti', sans-serif; }
+.font-bai-jamjuree { font-family: 'Bai Jamjuree', sans-serif; }
+.font-chakra-petch { font-family: 'Chakra Petch', sans-serif; }
+.font-charmonman { font-family: 'Charmonman', cursive; }
+.font-chonburi { font-family: 'Chonburi', cursive; }
+.font-fahkwang { font-family: 'Fahkwang', sans-serif; }
+.font-itim { font-family: 'Itim', cursive; }
+.font-k2d { font-family: 'K2D', sans-serif; }
+.font-kodchasan { font-family: 'Kodchasan', sans-serif; }
+.font-kanit { font-family: 'Kanit', sans-serif;  }
+.font-koHo { font-family: 'KoHo', sans-serif; }
+.font-krub { font-family: 'Krub', sans-serif; }
+.font-mali { font-family: 'Mali', cursive; }
+.font-mitr { font-family: 'Mitr', sans-serif; }
+.font-maitree { font-family: 'Maitree', serif; }
+.font-niramit { font-family: 'Niramit', sans-serif; }
+.font-pattaya { font-family: 'Pattaya', sans-serif; }
+.font-pridi { font-family: 'Pridi', serif; }
+.font-prompt { font-family: 'Prompt', sans-serif; }
+.font-srisakdi { font-family: 'Srisakdi', cursive; }
+.font-taviraj { font-family: 'Taviraj', serif; }
+.font-sriracha { font-family: 'Sriracha', cursive; }
+.font-trirong { font-family: 'Trirong', serif; }
+
+@font-face {
+   font-family: 'th-sarabun';
+   unicode-range: U+0E00–U+0E7F;
+   src: url('./assets/fonts/THSarabun.ttf') format('truetype'),
+        url('/assets/fonts/THSarabun Bold.ttf') format('truetype'),
+        url('/assets/fonts/THSarabun Italic.ttf') format('truetype'),
+        url('/assets/fonts/THSarabun Bold Italic.ttf') format('truetype');
+ }
+.font-thsarabun { font-family: 'th-sarabun', cursive; font-size : 16pt; }
+
+.font-bold { font-weight: bold; }
+.font-italic { font-style: italic; }
+/* end font set ==================== */
+
+.breadcrumb {
+  font-family: 'Trirong', serif;
+  margin-top: 0px;
+}
+
+.breadcrumb-arrow {
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  list-style: none;
+  background-color: #ebeceb
+}
+.breadcrumb-arrow li:first-child a {
+  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px
+}
+.breadcrumb-arrow li, .breadcrumb-arrow li a, .breadcrumb-arrow li span {
+  display: inline-block;
+  vertical-align: top
+}
+.breadcrumb-arrow li:not(:first-child) {
+  margin-left: -5px
+}
+.breadcrumb-arrow li+li:before {
+  padding: 0;
+  content: ""
+}
+.breadcrumb-arrow li span {
+  padding: 0 10px
+}
+.breadcrumb-arrow li a, .breadcrumb-arrow li:not(:first-child) span {
+  height: 36px;
+  padding: 0 10px 0 25px;
+  line-height: 36px
+}
+.breadcrumb-arrow li:first-child a {
+  padding: 0 10px
+}
+.breadcrumb-arrow li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(128, 130, 131);
+  border: 1px solid rgb(128, 130, 131);
+}
+.breadcrumb-arrow li:first-child a {
+  padding-left: 10px
+}
+.breadcrumb-arrow li a:after, .breadcrumb-arrow li a:before {
+  position: absolute;
+  top: -1px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent
+}
+.breadcrumb-arrow li a:before {
+  right: -10px;
+  z-index: 3;
+  border-left-color: rgb(128, 130, 131);
+  border-left-style: solid;
+  border-left-width: 11px
+}
+.breadcrumb-arrow li a:after {
+  right: -11px;
+  z-index: 2;
+  border-left: 11px solid #38393a
+}
+.breadcrumb-arrow li a:focus, .breadcrumb-arrow li a:hover {
+  background-color: #b7bbb7;
+  border: 1px solid #b7bbb7;
+  text-shadow: 1px 1px 1px rgb(20, 20, 20);
+}
+.breadcrumb-arrow li a:focus:before, .breadcrumb-arrow li a:hover:before {
+  border-left-color: #b7bbb7
+}
+.breadcrumb-arrow li a:active {
+  background-color: #c5ccc5;
+  border: 1px solid #c5ccc5; 
+}
+.breadcrumb-arrow li a:active:after, .breadcrumb-arrow li a:active:before {
+  border-left-color: #adb6ad;
+}
+.breadcrumb-arrow li span {
+  color: #7e8a83;
+}
+
+.full-div {
+padding: 0px 0px 0px 0px;
+height: 100vh;
+width: 100%;
+margin-right: 0;
+}
+
+.dg-wrapper {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.dg-wrapper-300 {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.dg-wrapper-400 {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.dg-wrapper-450 {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+
+.dg-wrapper-500 {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.dg-wrapper-600 {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+}
+
+.dg-wrapper-700 {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+}
+
+.dg-wrapper-800 {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
