@@ -28,7 +28,7 @@
         <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
           <a href="javascript://" clrDropdownItem>About</a>
           <a href="javascript://" clrDropdownItem>Preferences</a>
-          <a href="javascript://" clrDropdownItem>Log out</a>
+          <a href="javascript://" clrDropdownItem (click)="onLogout()">Log out</a>
         </clr-dropdown-menu>
       </clr-dropdown>
     </div>

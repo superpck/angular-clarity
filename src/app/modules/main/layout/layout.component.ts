@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   collapsed = true;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    sessionStorage.clear();
+    this.router.navigate(['login']);
   }
 
 }
