@@ -12,6 +12,7 @@ import { MainModule } from './modules/main/main.module';
 import { LoginModule } from './modules/login/login.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MainService } from './services/main.service';
+import { HelperModule } from './pipes/helpers.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MainService } from './services/main.service';
   providers: [
     MainService,
     AlertService,
+    HelperModule,
     { provide: 'API_URL', useValue: environment.apiUrl },
     { provide: 'APPNAME', useValue: environment.appName },
     { provide: 'VERSION', useValue: environment.version },

@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UserComponent } from './user/user.component';
 import { PreferenceComponent } from './preference/preference.component';
+import { HelperModule } from 'src/app/pipes/helpers.module';
 
 @NgModule({
   declarations: [MainPageComponent, PageNotFoundComponent, AboutComponent, LayoutComponent, UserComponent, PreferenceComponent],
@@ -18,6 +19,7 @@ import { PreferenceComponent } from './preference/preference.component';
     FormsModule,
     ClarityModule,
     ClrFormsNextModule,
+    HelperModule,
     MainRoutingModule
   ]
 })
