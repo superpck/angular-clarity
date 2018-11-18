@@ -1,8 +1,9 @@
-import { AlertService } from './services/alert.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import { environment } from './../environments/environment';
+import { AlertService } from './services/alert.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
@@ -28,6 +29,10 @@ import { MainService } from './services/main.service';
   providers: [
     MainService,
     AlertService,
+    { provide: 'API_URL', useValue: environment.apiUrl },
+    { provide: 'APPNAME', useValue: environment.appName },
+    { provide: 'VERSION', useValue: environment.version },
+    { provide: 'SUBVERSION', useValue: environment.subVersion },
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
