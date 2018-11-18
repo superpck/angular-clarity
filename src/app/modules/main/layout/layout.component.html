@@ -2,15 +2,15 @@
   <header class="header-5">
     <div class="branding">
       <a href="javascript://" class="nav-link">
-        <clr-icon shape="vm-bug"></clr-icon>
+        <clr-icon shape="vm"></clr-icon>
         <span class="title">App [layout.component.html]</span>
       </a>
     </div>
     <div class="header-nav">
-      <a href="javascript://" class="nav-link nav-icon">
-        <clr-icon shape="cloud"></clr-icon>
+      <a href="javascript://" class="active nav-link nav-icon" routerLink="/">
+        <clr-icon shape="home"></clr-icon>
       </a>
-      <a href="javascript://" class="active nav-link nav-icon">
+      <a href="javascript://" class="nav-link nav-icon">
         <clr-icon shape="folder"></clr-icon>
       </a>
     </div>
@@ -26,8 +26,8 @@
           <clr-icon shape="caret down"></clr-icon>
         </button>
         <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-          <a href="javascript://" clrDropdownItem>About</a>
-          <a href="javascript://" clrDropdownItem>Preferences</a>
+          <a href="javascript://" clrDropdownItem routerLink="/main/about">About</a>
+          <a href="javascript://" clrDropdownItem routerLink="/main/preference">Preferences</a>
           <a href="javascript://" clrDropdownItem (click)="onLogout()">Log out</a>
         </clr-dropdown-menu>
       </clr-dropdown>

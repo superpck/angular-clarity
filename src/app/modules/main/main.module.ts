@@ -9,9 +9,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UserComponent } from './user/user.component';
+import { PreferenceComponent } from './preference/preference.component';
 
 @NgModule({
-  declarations: [MainPageComponent, PageNotFoundComponent, AboutComponent, LayoutComponent, UserComponent],
+  declarations: [MainPageComponent, PageNotFoundComponent, AboutComponent, LayoutComponent, UserComponent, PreferenceComponent],
   imports: [
     CommonModule,
     FormsModule,

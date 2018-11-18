@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './about/about.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UserComponent } from './user/user.component';
+import { PreferenceComponent } from './preference/preference.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'main', pathMatch: 'full' },
       { path: 'main', component: MainPageComponent },
       { path: 'user', component: UserComponent },
+      { path: 'preference', component: PreferenceComponent },
       { path: 'about', component: AboutComponent },
       { path: '**', component: PageNotFoundComponent },
     ]
