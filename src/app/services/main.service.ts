@@ -20,14 +20,14 @@ export class MainService {
 
   getUser() {
     // return this.http.get(`${this.url}/get-annouce/${month}/${year}`)
-    return this.http.get(`https://randomuser.me/api/?results=50`)
+    return this.http.get(`https://randomuser.me/api/?results=100`)
       .toPromise()
       .then(result => result)
       .catch(error => error);
   }
 
   getUserTest() {
-    return this.http.get(`https://randomuser.me/api/?results=50`)
+    return this.http.get(`https://randomuser.me/api/?results=100`)
       .toPromise()
       .then(result => result)
       .catch(error => error);
