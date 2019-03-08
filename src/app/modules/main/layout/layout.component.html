@@ -1,5 +1,5 @@
 <clr-main-container>
-  <header class="header-5">
+  <clr-header class="header-5">
     <div class="branding">
       <a href="javascript://" class="nav-link">
         <clr-icon shape="vm"></clr-icon>
@@ -32,14 +32,14 @@
         </clr-dropdown-menu>
       </clr-dropdown>
     </div>
-  </header>
+  </clr-header>
 
   <div class="content-container">
     <main class="content-area">
       <router-outlet></router-outlet>
     </main>
 
-    <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="1">
       <clr-vertical-nav-group routerLinkActive="active">
         <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
         Users
