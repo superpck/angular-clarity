@@ -1,6 +1,6 @@
 # Angular-Clarity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6, [AngularJS](https://angular.io/) version 7.2.10 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 1.1.2
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8, [AngularJS](https://angular.io/) version 7.2.14 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 1.1.3
 
 ## Install
 - git clone https://github.com/superpck/angular-clarity
@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm install
 - npm audit fix --force
 - Run with command `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-- or Run `ng serve --port 4201 --open` for define another port.
+- or Run `ng serve --port 4201 --open` with another port and open web browser.
 
 ## Code scaffolding
 

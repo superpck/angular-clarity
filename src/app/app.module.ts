@@ -8,9 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+// my module and my service
 import { MainModule } from './modules/main/main.module';
 import { LoginModule } from './modules/login/login.module';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MainService } from './services/main.service';
 import { HelperModule } from './pipes/helpers.module';
 
