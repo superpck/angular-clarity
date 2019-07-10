@@ -14,7 +14,7 @@ export class AlertService {
       type: 'error',
       confirmButtonText: 'ตกลง'
     };
-    return swal(option);
+    return swal.fire(option);
 
   }
 
@@ -25,7 +25,7 @@ export class AlertService {
       type: 'success',
       confirmButtonText: 'ตกลง'
     };
-    return swal(option);
+    return swal.fire(option);
 
   }
 
@@ -36,7 +36,7 @@ export class AlertService {
       type: 'error',
       confirmButtonText: 'ตกลง'
     };
-    return swal(option);
+    return swal.fire(option);
 
   }
 
@@ -51,19 +51,18 @@ export class AlertService {
       confirmButtonText: 'Yes',
       cancelButtonText: 'No'
     };
-    return swal(option);
+    return swal.fire(option);
   }
 
-  convertToText (text) {
-    if (Array.isArray (text) || (typeof text === 'object')) {
-      let txt = (typeof text['error'] === 'string') ? text['error'] : JSON.stringify(text);
-      txt = (text['error'] && text['error'].sqlMessage) ? text['error'].sqlMessage : txt;
-      txt = (typeof text['code'] === 'string') ? text['code'] : txt;
-
-      const newText = text['error'] ? ('error: ' + text['error']) : JSON.stringify(text);
-      return txt;
+  convertToText(text) {
+    if (text && text.message) {
+      return text.message
+    } else if (text && text.error) {
+      return text.error
+    } else if (text && text.code) {
+      return text.code
     } else {
-      return text.trim();
+      return text ? JSON.stringify(text) : '';
     }
   }
 
