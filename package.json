@@ -1,6 +1,6 @@
 {
   "name": "angular_clarity",
-  "version": "8.2.12",
+  "version": "8.2.14",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
