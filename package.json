@@ -3,7 +3,7 @@
   "version": "8.2.14",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build --base-href ./ --prod --build-optimizer",
     "test": "ng test",
     "lint": "ng lint",
