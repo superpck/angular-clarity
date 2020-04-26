@@ -1,0 +1,84 @@
+<ol class="breadcrumb breadcrumb-arrow font-trirong">
+  <li><a href="javascript://" [routerLink]="['/']">Home</a></li>
+  <li><a href="javascript://">User</a></li>
+</ol>
+
+<div class="dg-wrapper">
+  <h3>User list from https://randomuser.me/api/?results=100</h3>
+  <clr-datagrid [clrDgLoading]="loading">
+    <clr-dg-placeholder>user not found!</clr-dg-placeholder>
+    <clr-dg-column>User ID</clr-dg-column>
+    <clr-dg-column>Name</clr-dg-column>
+    <clr-dg-column>gender</clr-dg-column>
+    <clr-dg-column>dob</clr-dg-column>
+    <clr-dg-column>email</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+      <clr-dg-cell>{{user.login.username}}</clr-dg-cell>
+      <clr-dg-cell>{{user.name.title}} {{user.name.first}} {{user.name.last}}</clr-dg-cell>
+      <clr-dg-cell>{{user.gender}}</clr-dg-cell>
+      <clr-dg-cell>{{user.dob.date | date}}</clr-dg-cell>
+      <clr-dg-cell>{{user.email}}</clr-dg-cell>
+      <clr-dg-action-overflow>
+        <button class="action-item" (click)="onEdit(user)">Edit</button>
+        <button class="action-item" (click)="onDelete(user)">Delete</button>
+      </clr-dg-action-overflow>˝
+      <clr-dg-row-detail *clrIfExpanded>
+        <table class="table">
+          <tr>
+            <td class="td-title">picture</td>
+            <td class="td-content"><img [src]="user.picture.large"></td>
+          </tr>
+          <tr>
+            <td class="td-title">id</td>
+            <td class="td-content">{{user.id.name}}, {{user.id.value}}</td>
+          </tr>
+          <tr>
+            <td class="td-title">location</td>
+            <td class="td-content">{{user.location.street}} {{user.location.city}}, {{user.location.state}} {{user.location.postcode}}, {{user.nat}} </td>
+          </tr>
+          <tr>
+            <td class="td-title">register</td>
+            <td class="td-content">{{user.registered.date | date}}</td>
+          </tr>
+          <tr>
+            <td class="td-title">tel</td>
+            <td class="td-content">phone: {{user.phone}} cell: {{user.cell}}</td>
+          </tr>
+        </table>
+      </clr-dg-row-detail>
+    </clr-dg-row>
+
+    <clr-dg-footer>
+      <clr-dg-pagination #pagination [clrDgPageSize]="10">
+        <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">Users per page</clr-dg-page-size>
+        {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}}
+        of {{pagination.totalItems}} users
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</div>
+
+<clr-modal [(clrModalOpen)]="modalEdit" [clrModalSize]="'lg'" [clrModalStaticBackdrop]="true">
+  <h3 class="modal-title">User Edit</h3>
+  <div class="modal-body" *ngIf="rowSelected.name">
+    <h2>{{rowSelected.name.title}} {{rowSelected.name.first}} {{rowSelected.name.last}}</h2>
+    <form clrForm>
+      <clr-input-container>
+        <label>name</label>
+        <input clrInput type="text" [(ngModel)]="rowSelected.name.title" name="title" />
+        <input clrInput type="text" [(ngModel)]="rowSelected.name.first" name="first" />
+        <input clrInput type="text" [(ngModel)]="rowSelected.name.last" name="last" />
+      </clr-input-container>
+      <clr-input-container>
+        <label>email</label>
+        <input clrInput type="text" [(ngModel)]="rowSelected.email" name="email" />
+      </clr-input-container>
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline" (click)="modalEdit = false">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="onSave()">Save</button>
+  </div>
+</clr-modal>

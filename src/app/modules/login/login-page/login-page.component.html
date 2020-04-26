@@ -1,0 +1,40 @@
+<div class="login-wrapper">
+  <form class="login">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Company Product Name
+      <h5 class="hint">Use your Company ID to sign in or create one now</h5>
+    </section>
+    <div class="login-group">
+        
+      <clr-select-container>
+        <select clrSelect id="login-auth-source-1">
+          <option>Local Users</option>
+          <option>Administrator</option>
+        </select>
+      </clr-select-container>
+
+      <clr-input-container>
+        <input clrInput class="username" name="username" type="text" id="login_username" [(ngModel)]="username"
+          placeholder="Username">
+      </clr-input-container>
+
+      <clr-password-container>
+        <input clrPassword class="password" name="password" type="password" id="login_password" [(ngModel)]="password"
+          placeholder="Password">
+      </clr-password-container>
+
+      <clr-checkbox-wrapper>
+        <input clrCheckbox type="checkbox" id="rememberme">
+        <label for="rememberme"> Remember me </label>
+      </clr-checkbox-wrapper>
+
+      <div class="error active" *ngIf="isError">
+        Invalid user name or password
+      </div>
+      <button [disabled]="!username || !password" type="submit" class="btn btn-primary"
+        (click)="onLogin()">Login</button>
+      <a href="javascript://" class="signup">Sign up for a Company ID</a>
+    </div>
+  </form>
+</div>
