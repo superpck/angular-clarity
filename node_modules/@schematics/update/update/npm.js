@@ -96,7 +96,7 @@ function getNpmPackageJson(packageName, logger, options) {
         }
     }
     const resultPromise = pacote.packument(packageName, {
-        'full-metadata': true,
+        fullMetadata: true,
         ...npmrc,
         ...(options && options.registryUrl ? { registry: options.registryUrl } : {}),
     });

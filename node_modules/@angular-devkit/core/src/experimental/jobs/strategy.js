@@ -7,10 +7,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-const stableStringify = require("fast-json-stable-stringify");
 const rxjs_1 = require("rxjs");
 const operators_1 = require("rxjs/operators");
 const api_1 = require("./api");
+const stableStringify = require("fast-json-stable-stringify");
 var strategy;
 (function (strategy) {
     /**

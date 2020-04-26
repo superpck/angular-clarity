@@ -1,3 +1,10 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 import { JsonAstArray, JsonAstKeyValue, JsonAstObject, JsonObject, JsonValue } from '../../json';
 export declare type ChangeListener = (op: 'add' | 'remove' | 'replace', path: string, node: JsonAstArray | JsonAstObject | JsonAstKeyValue, value?: JsonValue) => void;
 export declare function escapeKey(key: string | number): string | number;

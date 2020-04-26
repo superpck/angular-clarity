@@ -19,6 +19,11 @@ function getSchemaLocation() {
 exports.workspaceSchemaPath = getSchemaLocation();
 const configNames = ['angular.json', '.angular.json'];
 const globalFileName = '.angular-config.json';
+function xdgConfigHome(home, configFile) {
+    // https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+    const p = process.env['XDG_CONFIG_HOME'] || path.join(home, '.config', 'angular');
+    return configFile ? path.join(p, configFile) : p;
+}
 function projectFilePath(projectPath) {
     // Find the configuration, either where specified, in the Angular CLI project
     // (if it's in node_modules) or from the current process.
@@ -30,6 +35,14 @@ function globalFilePath() {
     const home = os.homedir();
     if (!home) {
         return null;
+    }
+    // follow XDG Base Directory spec
+    // note that createGlobalSettings() will continue creating
+    // global file in home directory, with this user will have
+    // choice to move change its location to meet XDG convention
+    const xdgConfig = xdgConfigHome(home, globalFileName);
+    if (fs_1.existsSync(xdgConfig)) {
+        return xdgConfig;
     }
     const p = path.join(home, globalFileName);
     if (fs_1.existsSync(p)) {

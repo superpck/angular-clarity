@@ -386,6 +386,8 @@ class UpdateCommand extends command_1.Command {
             }
             if (success) {
                 if (packageName === '@angular/core'
+                    && options.from
+                    && +options.from.split('.')[0] < 9
                     && (options.to || packageNode.package.version).split('.')[0] === '9') {
                     this.logger.info(NG_VERSION_9_POST_MSG);
                 }
@@ -495,7 +497,7 @@ class UpdateCommand extends command_1.Command {
                     return 0;
                 }
             }
-            if (migrations.some(m => m.package === '@angular/core' && m.to.split('.')[0] === '9')) {
+            if (migrations.some(m => m.package === '@angular/core' && m.to.split('.')[0] === '9' && +m.from.split('.')[0] < 9)) {
                 this.logger.info(NG_VERSION_9_POST_MSG);
             }
         }

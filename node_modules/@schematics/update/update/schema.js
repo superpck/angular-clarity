@@ -7,6 +7,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var PackageManager;
 (function (PackageManager) {
+    PackageManager["Cnpm"] = "cnpm";
     PackageManager["Npm"] = "npm";
+    PackageManager["Pnpm"] = "pnpm";
     PackageManager["Yarn"] = "yarn";
 })(PackageManager = exports.PackageManager || (exports.PackageManager = {}));

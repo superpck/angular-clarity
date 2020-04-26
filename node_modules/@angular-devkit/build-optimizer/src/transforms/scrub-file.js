@@ -475,28 +475,24 @@ function identifierIsTslib(id, tslibImports, checker) {
 }
 // Check if a function call is a tslib helper.
 function isTslibHelper(callExpr, helper, tslibImports, checker) {
-    let callExprIdent = callExpr.expression;
-    if (callExpr.expression.kind !== ts.SyntaxKind.Identifier) {
-        if (callExpr.expression.kind === ts.SyntaxKind.PropertyAccessExpression) {
-            const propAccess = callExpr.expression;
-            const left = propAccess.expression;
-            callExprIdent = propAccess.name;
-            if (left.kind !== ts.SyntaxKind.Identifier) {
-                return false;
-            }
-            const id = left;
-            if (!identifierIsTslib(id, tslibImports, checker)) {
-                return false;
-            }
-        }
-        else {
+    let name;
+    if (ts.isIdentifier(callExpr.expression)) {
+        name = callExpr.expression.text;
+    }
+    else if (ts.isPropertyAccessExpression(callExpr.expression)) {
+        const left = callExpr.expression.expression;
+        if (!ts.isIdentifier(left)) {
             return false;
         }
+        if (!identifierIsTslib(left, tslibImports, checker)) {
+            return false;
+        }
+        name = callExpr.expression.name.text;
+    }
+    else {
+        return false;
     }
     // node.text on a name that starts with two underscores will return three instead.
     // Unless it's an expression like tslib.__decorate, in which case it's only 2.
-    if (callExprIdent.text !== `_${helper}` && callExprIdent.text !== helper) {
-        return false;
-    }
-    return true;
+    return name === `_${helper}` || name === helper;
 }

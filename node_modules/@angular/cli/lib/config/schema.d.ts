@@ -79,6 +79,10 @@ export interface SchematicsAngularComponent {
      */
     changeDetection?: ChangeDetection;
     /**
+     * Specifies if the style will contain `:host { display: block; }`.
+     */
+    displayBlock?: boolean;
+    /**
      * Specifies if the component is an entry component of declaring module.
      */
     entryComponent?: boolean;
