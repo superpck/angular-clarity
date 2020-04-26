@@ -19,7 +19,7 @@ declare class LanguageServiceImpl implements ng.LanguageService {
     private readonly host;
     constructor(host: TypeScriptServiceHost);
     getSemanticDiagnostics(fileName: string): tss.Diagnostic[];
-    getCompletionsAtPosition(fileName: string, position: number, options?: tss.GetCompletionsAtPositionOptions): tss.CompletionInfo | undefined;
+    getCompletionsAtPosition(fileName: string, position: number, _options?: tss.GetCompletionsAtPositionOptions): tss.CompletionInfo | undefined;
     getDefinitionAndBoundSpan(fileName: string, position: number): tss.DefinitionInfoAndBoundSpan | undefined;
     getQuickInfoAtPosition(fileName: string, position: number): tss.QuickInfo | undefined;
 }

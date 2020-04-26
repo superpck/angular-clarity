@@ -8,14 +8,13 @@
 /// <amd-module name="@angular/language-service/src/diagnostics" />
 import { NgAnalyzedModules } from '@angular/compiler';
 import * as ts from 'typescript';
-import { AstResult } from './common';
 import * as ng from './types';
 import { TypeScriptServiceHost } from './typescript_host';
 /**
  * Return diagnostic information for the parsed AST of the template.
  * @param ast contains HTML and template AST
  */
-export declare function getTemplateDiagnostics(ast: AstResult): ng.Diagnostic[];
+export declare function getTemplateDiagnostics(ast: ng.AstResult): ng.Diagnostic[];
 /**
  * Performs a variety diagnostics on directive declarations.
  *

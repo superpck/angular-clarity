@@ -64,34 +64,4 @@ export declare class ExternalTemplate extends BaseTemplate {
     readonly span: ng.Span;
     constructor(source: string, fileName: string, classDeclNode: ts.ClassDeclaration, classSymbol: ng.StaticSymbol, host: TypeScriptServiceHost);
 }
-/**
- * Returns a property assignment from the assignment value, or `undefined` if there is no
- * assignment.
- */
-export declare function getPropertyAssignmentFromValue(value: ts.Node): ts.PropertyAssignment | undefined;
-/**
- * Given a decorator property assignment, return the ClassDeclaration node that corresponds to the
- * directive class the property applies to.
- * If the property assignment is not on a class decorator, no declaration is returned.
- *
- * For example,
- *
- * @Component({
- *   template: '<div></div>'
- *   ^^^^^^^^^^^^^^^^^^^^^^^---- property assignment
- * })
- * class AppComponent {}
- *           ^---- class declaration node
- *
- * @param propAsgn property assignment
- */
-export declare function getClassDeclFromDecoratorProp(propAsgnNode: ts.PropertyAssignment): ts.ClassDeclaration | undefined;
-/**
- * Determines if a property assignment is on a class decorator.
- * See `getClassDeclFromDecoratorProperty`, which gets the class the decorator is applied to, for
- * more details.
- *
- * @param prop property assignment
- */
-export declare function isClassDecoratorProperty(propAsgn: ts.PropertyAssignment): boolean;
 export {};

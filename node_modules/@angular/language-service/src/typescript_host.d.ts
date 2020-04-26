@@ -8,8 +8,7 @@
 /// <amd-module name="@angular/language-service/src/typescript_host" />
 import { HtmlParser, NgAnalyzedModules, ParseTreeResult, ResourceLoader } from '@angular/compiler';
 import * as tss from 'typescript/lib/tsserverlibrary';
-import { AstResult } from './common';
-import { Declaration, LanguageService, LanguageServiceHost, TemplateSource } from './types';
+import { AstResult, Declaration, LanguageService, LanguageServiceHost, TemplateSource } from './types';
 /**
  * Create a `LanguageServiceHost`
  */
@@ -27,7 +26,7 @@ export declare class DummyHtmlParser extends HtmlParser {
  * Avoid loading resources in the language servcie by using a dummy loader.
  */
 export declare class DummyResourceLoader extends ResourceLoader {
-    get(url: string): Promise<string>;
+    get(_url: string): Promise<string>;
 }
 /**
  * An implementation of a `LanguageServiceHost` for a TypeScript project.

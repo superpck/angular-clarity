@@ -8,7 +8,6 @@
 /// <amd-module name="@angular/language-service/src/hover" />
 import { NgAnalyzedModules } from '@angular/compiler';
 import * as ts from 'typescript';
-import { AstResult } from './common';
 import * as ng from './types';
 /**
  * Traverse the template AST and look for the symbol located at `position`, then
@@ -17,7 +16,7 @@ import * as ng from './types';
  * @param position location of the symbol
  * @param analyzedModules all NgModules in the program.
  */
-export declare function getTemplateHover(info: AstResult, position: number, analyzedModules: NgAnalyzedModules): ts.QuickInfo | undefined;
+export declare function getTemplateHover(info: ng.AstResult, position: number, analyzedModules: NgAnalyzedModules): ts.QuickInfo | undefined;
 /**
  * Get quick info for Angular semantic entities in TypeScript files, like Directives.
  * @param position location of the symbol in the source file

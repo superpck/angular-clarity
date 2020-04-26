@@ -7,7 +7,7 @@
  */
 /// <amd-module name="@angular/language-service/src/definitions" />
 import * as ts from 'typescript';
-import { AstResult } from './common';
+import { AstResult } from './types';
 /**
  * Traverse the template AST and look for the symbol located at `position`, then
  * return its definition and span of bound text.

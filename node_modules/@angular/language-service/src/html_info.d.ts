@@ -25,4 +25,3 @@ export declare class SchemaInformation {
 }
 export declare function eventNames(elementName: string): string[];
 export declare function propertyNames(elementName: string): string[];
-export declare function propertyType(elementName: string, propertyName: string): string;
