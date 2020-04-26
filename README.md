@@ -30,3 +30,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Screenshot
+About Page
+![About](1.png)
+
+Datagrid
+![Datagrid](2.png)
+
+Datagrid expand row and single action
+![expand](3.jpg)
+
+Modal
+![modal](4.png)
+
+sweetalert2
+![sweetalert2](5.png)
+
