@@ -25,7 +25,7 @@
     "@clr/icons": "^3.1.4",
     "@clr/ui": "^3.1.4",
     "@webcomponents/webcomponentsjs": "^2.4.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "numeral": "^2.0.6",
     "rxjs": "^6.5.5",
