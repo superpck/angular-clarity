@@ -1,6 +1,6 @@
 # Angular-Clarity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23, [Angular.io](https://angular.io/) version 8.2.14 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 2.3.5
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9, [Angular.io](https://angular.io/) version 9.1.11 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 3.1.4
 
 ## Install
 - clone project `git clone https://github.com/superpck/angular-clarity`
@@ -30,3 +30,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Screenshot
+About Page
+![About](1.png)
+
+Datagrid
+![Datagrid](2.png)
+
+Datagrid expand row and single action
+![expand](3.jpg)
+
+Modal
+![modal](4.png)
+
+sweetalert2
+![sweetalert2](5.png)
+

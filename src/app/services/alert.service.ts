@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { default as swal, SweetAlertType, SweetAlertOptions } from 'sweetalert2';
+import { default as swal, SweetAlertOptions } from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class AlertService {
     const option: SweetAlertOptions = {
       title: title,
       text: this.convertToText(text),
-      type: 'error',
+      icon: 'error',
       confirmButtonText: 'ตกลง'
     };
     return swal.fire(option);
@@ -22,7 +22,7 @@ export class AlertService {
     const option: SweetAlertOptions = {
       title: title,
       text: this.convertToText(text),
-      type: 'success',
+      icon: 'success',
       confirmButtonText: 'ตกลง'
     };
     return swal.fire(option);
@@ -33,7 +33,7 @@ export class AlertService {
     const option: SweetAlertOptions = {
       title: title,
       text: this.convertToText(text),
-      type: 'error',
+      icon: 'error',
       confirmButtonText: 'ตกลง'
     };
     return swal.fire(option);
@@ -44,7 +44,7 @@ export class AlertService {
     const option: SweetAlertOptions = {
       title: title,
       text: this.convertToText(text),
-      type: 'question',
+      icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
