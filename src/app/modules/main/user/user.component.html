@@ -4,7 +4,16 @@
 </ol>
 
 <div class="dg-wrapper">
-  <h3>User list from https://randomuser.me/api/?results=100</h3>
+  <div class="clr-row">
+    <div class="clr-col-8">
+      <h3>User list from https://randomuser.me/api/?results=100</h3>
+    </div>
+    <div class="clr-col-4" style="text-align: right;">
+      <button class="btn btn-outline" (click)="onExport()">
+        <clr-icon shape="export"></clr-icon> xlsx
+      </button>
+    </div>
+  </div>
   <clr-datagrid [clrDgLoading]="loading">
     <clr-dg-placeholder>user not found!</clr-dg-placeholder>
     <clr-dg-column>User ID</clr-dg-column>
@@ -35,7 +44,8 @@
           </tr>
           <tr>
             <td class="td-title">location</td>
-            <td class="td-content">{{user.location.street}} {{user.location.city}}, {{user.location.state}} {{user.location.postcode}}, {{user.nat}} </td>
+            <td class="td-content">{{user.location.street}} {{user.location.city}}, {{user.location.state}}
+              {{user.location.postcode}}, {{user.nat}} </td>
           </tr>
           <tr>
             <td class="td-title">register</td>
