@@ -44,7 +44,7 @@ export class UserComponent implements OnInit {
   async onDelete(row) {
     const confirmed: any = await this.alertService.confirm('', 'Delete confirm?');
     if (confirmed.value) {
-      this.toastr.success('ลบเรียบร้อยแล้ว');
+      this.toastr.success('Deleted successfully');
       // ....
     }
   }
@@ -52,7 +52,7 @@ export class UserComponent implements OnInit {
   async onSave() {
     const confirmed: any = await this.alertService.confirm('', 'Save confirm?');
     if (confirmed.value) {
-      this.toastr.success('บันทึกเรียบร้อยแล้ว');
+      this.toastr.success('Save successfully');
       // ....
       this.modalEdit = false;
     }
