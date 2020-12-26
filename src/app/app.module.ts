@@ -1,5 +1,7 @@
+import { ExcelService } from './services/excel.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +25,7 @@ import { HelperModule } from './pipes/helpers.module';
     ClarityModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     HelperModule,
     MainModule,
     LoginModule
@@ -30,6 +33,7 @@ import { HelperModule } from './pipes/helpers.module';
   providers: [
     MainService,
     AlertService,
+    ExcelService,
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { MainService } from './../../../services/main.service';
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from 'src/app/services/alert.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +16,8 @@ export class UserComponent implements OnInit {
 
   constructor(
     private mainService: MainService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit() {
@@ -39,6 +41,7 @@ export class UserComponent implements OnInit {
   async onDelete(row) {
     const confirmed: any = await this.alertService.confirm('', 'Delete confirm?');
     if (confirmed.value) {
+      this.toastr.success('ลบเรียบร้อยแล้ว');
       // ....
     }
   }
@@ -46,6 +49,7 @@ export class UserComponent implements OnInit {
   async onSave() {
     const confirmed: any = await this.alertService.confirm('', 'Save confirm?');
     if (confirmed.value) {
+      this.toastr.success('บันทึกเรียบร้อยแล้ว');
       // ....
       this.modalEdit = false;
     }
