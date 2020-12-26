@@ -25,6 +25,7 @@
     "@clr/icons": "^4.0.8",
     "@clr/ui": "^4.0.8",
     "@webcomponents/webcomponentsjs": "^2.5.0",
+    "file-saver": "^2.0.5",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "ngx-toastr": "^13.2.0",
