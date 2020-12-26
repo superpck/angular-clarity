@@ -16,7 +16,7 @@ const routes: Routes = [
     component: LayoutComponent,
     // canActivate: [AuthGuardService],
     children: [
-      { path: '', redirectTo: 'main', pathMatch: 'full' },
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
       { path: 'main', component: MainPageComponent },
       { path: 'user', component: UserComponent },
       { path: 'preference', component: PreferenceComponent },
