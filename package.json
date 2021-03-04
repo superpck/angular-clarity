@@ -1,6 +1,6 @@
 {
   "name": "angular-clarity",
-  "version": "11.0.5",
+  "version": "11.2.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -30,7 +30,7 @@
     "moment": "^2.29.1",
     "ngx-toastr": "^13.2.0",
     "numeral": "^2.0.6",
-    "rxjs": "~6.6.3",
+    "rxjs": "~6.6.6",
     "sweetalert2": "^10.12.6",
     "tslib": "^2.0.0",
     "xlsx": "^0.16.9",
