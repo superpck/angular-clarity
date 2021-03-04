@@ -20,10 +20,10 @@
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
     "@auth0/angular-jwt": "^5.0.2",
-    "@clr/angular": "^4.0.8",
+    "@clr/angular": "^5.0.2",
     "@clr/core": "^4.0.8",
-    "@clr/icons": "^4.0.8",
-    "@clr/ui": "^4.0.8",
+    "@clr/icons": "^5.0.2",
+    "@clr/ui": "^5.0.2",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "file-saver": "^2.0.5",
     "lodash": "^4.17.20",
@@ -34,7 +34,8 @@
     "sweetalert2": "^10.12.6",
     "tslib": "^2.0.0",
     "xlsx": "^0.16.9",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.10.3",
+    "@cds/core": "^5.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.3",
