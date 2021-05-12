@@ -1,6 +1,6 @@
 {
   "name": "angular-clarity",
-  "version": "11.2.11",
+  "version": "11.2.13",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201 -o",
@@ -20,11 +20,11 @@
     "@angular/platform-browser-dynamic": "~11.2.13",
     "@angular/router": "~11.2.13",
     "@auth0/angular-jwt": "^5.0.2",
-    "@cds/core": "^5.1.1",
-    "@clr/angular": "^5.1.1",
+    "@cds/core": "^5.2.0",
+    "@clr/angular": "^5.2.0",
     "@clr/core": "^4.0.12",
-    "@clr/icons": "^5.1.1",
-    "@clr/ui": "^5.1.1",
+    "@clr/icons": "^5.2.0",
+    "@clr/ui": "^5.2.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "file-saver": "^2.0.5",
     "lodash": "^4.17.21",
