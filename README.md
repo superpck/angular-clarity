@@ -42,7 +42,7 @@ Datagrid
 ![Datagrid](2.png)
 
 Datagrid expand row and single action
-![expand](3.jpg)
+![expand](3.png)
 
 Modal
 ![modal](4.png)
