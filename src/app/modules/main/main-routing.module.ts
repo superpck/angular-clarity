@@ -12,7 +12,7 @@ import { PreferenceComponent } from './preference/preference.component';
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: '',
     component: LayoutComponent,
     // canActivate: [AuthGuardService],
     children: [
