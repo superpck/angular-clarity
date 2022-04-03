@@ -1,6 +1,6 @@
 # Angular-Clarity
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6 [Angular.io](https://angular.io/) version 13.2.6 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 5.6.6/13.0.2
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1 [Angular.io](https://angular.io/) version 13.3.1 and [Clarity Design System](https://vmware.github.io/clarity/news) by VMware version 5.6.4/13.0.2
 
 ## Install
 - clone project `git clone https://github.com/superpck/angular-clarity`
