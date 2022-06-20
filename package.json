@@ -1,6 +1,6 @@
 {
   "name": "angular-clarity",
-  "version": "13.3.9",
+  "version": "14.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4201 -o",
