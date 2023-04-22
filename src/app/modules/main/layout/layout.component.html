@@ -2,16 +2,16 @@
   <clr-header class="header-5">
     <div class="branding">
       <a href="javascript://" class="nav-link">
-        <clr-icon shape="vm"></clr-icon>
+        <cds-icon shape="vm"></cds-icon>
         <span class="title">App [layout.component.html]</span>
       </a>
     </div>
     <div class="header-nav" [clr-nav-level]="1">
       <a href="javascript://" class="active nav-link nav-icon" routerLink="/">
-        <clr-icon shape="home"></clr-icon>
+        <cds-icon shape="home"></cds-icon>
       </a>
       <a href="javascript://" class="nav-link nav-icon">
-        <clr-icon shape="folder"></clr-icon>
+        <cds-icon shape="folder"></cds-icon>
       </a>
     </div>
     <form class="search">
@@ -22,8 +22,8 @@
     <div class="header-actions">
       <clr-dropdown>
         <button class="nav-text" clrDropdownTrigger>
-          <clr-icon shape="user"></clr-icon>
-          <clr-icon shape="caret down"></clr-icon>
+          <cds-icon shape="user"></cds-icon>
+          <cds-icon shape="angle" rotation="180"></cds-icon>
         </button>
         <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
           <a href="javascript://" clrDropdownItem routerLink="/main/about">About</a>
@@ -41,19 +41,19 @@
 
     <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed" [clr-nav-level]="2">
       <clr-vertical-nav-group routerLinkActive="active">
-        <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+        <cds-icon shape="user" clrVerticalNavIcon></cds-icon>
         Users
         <clr-vertical-nav-group-children>
           <a clrVerticalNavLink routerLink="./user" routerLinkActive="active">
-            user list
+            <cds-icon shape="user"></cds-icon> user list
           </a>
           <a clrVerticalNavLink routerLink="./normal/snorlax" routerLinkActive="active">
-            report
+            <cds-icon shape="bar-chart"></cds-icon> report
           </a>
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
       <clr-vertical-nav-group routerLinkActive="active">
-        <clr-icon shape="flame" clrVerticalNavIcon></clr-icon>
+        <cds-icon shape="flame" clrVerticalNavIcon></cds-icon>
         Fire
         <clr-vertical-nav-group-children>
           <a clrVerticalNavLink routerLink="./fire/charmander" routerLinkActive="active">
@@ -65,7 +65,7 @@
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
       <clr-vertical-nav-group routerLinkActive="active">
-        <clr-icon shape="bolt" clrVerticalNavIcon></clr-icon>
+        <cds-icon shape="bolt" clrVerticalNavIcon></cds-icon>
         Electric
         <clr-vertical-nav-group-children>
           <a clrVerticalNavLink routerLink="./electric/pikachu" routerLinkActive="active">
@@ -77,7 +77,7 @@
         </clr-vertical-nav-group-children>
       </clr-vertical-nav-group>
       <a clrVerticalNavLink routerLinkActive="active" routerLink="/main/about">
-        <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
+        <cds-icon shape="certificate" clrVerticalNavIcon></cds-icon>
         Credit
       </a>
     </clr-vertical-nav>
