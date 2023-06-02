@@ -30,7 +30,7 @@
     "file-saver": "^2.0.5",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
-    "ngx-toastr": "^16.1.1",
+    "ngx-toastr": "^17.0.2",
     "numeral": "^2.0.6",
     "rxjs": "^7.8.0",
     "sweetalert2": "^11.4.8",
