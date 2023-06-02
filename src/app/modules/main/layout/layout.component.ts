@@ -1,5 +1,12 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { 
+  ClarityIcons, vmIcon, homeIcon, folderIcon, userIcon, flameIcon, boltIcon, certificateIcon, barChartIcon, angleIcon
+} from '@cds/core/icon';
+ClarityIcons.addIcons(
+  vmIcon, homeIcon, folderIcon, userIcon, flameIcon, 
+  boltIcon, certificateIcon, barChartIcon, angleIcon
+);
 
 @Component({
   selector: 'app-layout',

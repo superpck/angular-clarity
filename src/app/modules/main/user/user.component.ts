@@ -4,6 +4,12 @@ import { ToastrService } from 'ngx-toastr';
 import { ExcelService } from './../../../services/excel.service';
 import { MainService } from './../../../services/main.service';
 import * as moment from 'moment';
+import { 
+  ClarityIcons, barsIcon, xlsFileIcon
+} from '@cds/core/icon';
+ClarityIcons.addIcons(
+  barsIcon, xlsFileIcon
+);
 
 @Component({
   selector: 'app-user',
